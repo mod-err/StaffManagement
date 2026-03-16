@@ -1,9 +1,28 @@
 ﻿#include <iostream>
 #include "workerManager.h"
+#include "worker.h"
+#include "employee.h"
+#include "manager.h"
+#include "boss.h"
 
 using namespace std;
 
 int main() {
+
+	//测试：-----------------------
+	Worker* worker = NULL;
+
+	worker = new Employee(1, "张三", 1);
+	worker->showInfo();
+
+	worker = new Manager(2, "李四", 2);
+	worker->showInfo();
+
+	worker = new Boss(3, "位昭", 3);
+	worker->showInfo();
+
+	delete worker;
+	//---------------------------
 
 	WorkerManager wm;
 	int choice = 0;

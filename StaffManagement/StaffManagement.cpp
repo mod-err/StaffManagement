@@ -9,21 +9,6 @@ using namespace std;
 
 int main() {
 
-	//测试：-----------------------
-	Worker* worker = NULL;
-
-	worker = new Employee(1, "张三", 1);
-	worker->showInfo();
-
-	worker = new Manager(2, "李四", 2);
-	worker->showInfo();
-
-	worker = new Boss(3, "位昭", 3);
-	worker->showInfo();
-
-	delete worker;
-	//---------------------------
-
 	WorkerManager wm;
 	int choice = 0;
 	while (1) {
@@ -37,6 +22,7 @@ int main() {
 			wm.exitSystem();
 			break;
 		case 1://增加信息
+			wm.addEmploy();
 			break;
 		case 2://显示信息
 			break;
